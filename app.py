@@ -37,12 +37,7 @@ bath     = st.sidebar.slider("How many bathrooms?",int(data.bathrooms.min()),int
 bed      = st.sidebar.slider("How many bedrooms?",int(data.bedrooms.min()),int(data.bedrooms.max()),int(data.bedrooms.mean()) )
 floor    = st.sidebar.slider("How many floor do you want?",int(data.floors.min()),int(data.floors.max()),int(data.floors.mean()) )
 
-#checking prediction house price
-if st.sidebar.button("See the Price! 😍"):
-    st.header("Your house prices prediction is USD {}".format(int(predictions)))
-    st.subheader("Your house range is USD {} - USD {}".format(int(predictions-errors),int(predictions+errors) ))
-st.sidebar.subheader ('Made with 💖 by')
-st.sidebar.subheader('[*Faruki Ramly*](https://www.linkedin.com/in/farukiramly/)')
+
 
 #splitting your data
 X = data.drop('price', axis = 1)
@@ -58,8 +53,13 @@ model.predict(X_test)
 errors = np.sqrt(mean_squared_error(y_test,model.predict(X_test))) 
 predictions = model.predict([[sqft_liv,bath,bed,floor,year]])[0]
 
+#checking prediction house price
+if st.sidebar.button("See the Price! 😍"):
+    st.header("Your house prices prediction is USD {}".format(int(predictions)))
+    st.subheader("Your house range is USD {} - USD {}".format(int(predictions-errors),int(predictions+errors) ))
 
-
+st.sidebar.subheader ('Made with 💖 by')
+st.sidebar.subheader('[*Faruki Ramly*](https://www.linkedin.com/in/farukiramly/)')
 #---Footer
 hide_streamlit_style = """
             <style>
