@@ -36,10 +36,10 @@ st.write("Now lets choose the criteria you want")
 
 #input the numbers
 year = st.sidebar.slider("What Year Build you want?",int(data.yr_built.min()),int(data.yr_built.max()),int(data.yr_built.mean()) )
-sqft_liv = st.slider("What is your square feet of living room?",int(data.sqft_living.min()),int(data.sqft_living.max()),int(data.sqft_living.mean()) )
-bath     = st.slider("How many bathrooms?",int(data.bathrooms.min()),int(data.bathrooms.max()),int(data.bathrooms.mean()) )
-bed      = st.slider("How many bedrooms?",int(data.bedrooms.min()),int(data.bedrooms.max()),int(data.bedrooms.mean()) )
-floor    = st.slider("How many floor do you want?",int(data.floors.min()),int(data.floors.max()),int(data.floors.mean()) )
+sqft_liv = st.sidebar.slider("What is your square feet of living room?",int(data.sqft_living.min()),int(data.sqft_living.max()),int(data.sqft_living.mean()) )
+bath     = st.sidebar.slider("How many bathrooms?",int(data.bathrooms.min()),int(data.bathrooms.max()),int(data.bathrooms.mean()) )
+bed      = st.sidebar.slider("How many bedrooms?",int(data.bedrooms.min()),int(data.bedrooms.max()),int(data.bedrooms.mean()) )
+floor    = st.sidebar.slider("How many floor do you want?",int(data.floors.min()),int(data.floors.max()),int(data.floors.mean()) )
 
 #splitting your data
 X = data.drop('price', axis = 1)
