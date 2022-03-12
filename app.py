@@ -39,15 +39,14 @@ floor    = st.sidebar.slider("How many floor do you want?",int(data.floors.min()
 
 
 
-#splitting your data
+#splitting the data
 X = data.drop('price', axis = 1)
 y = data['price']
 X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=.2, random_state=45)
 
 #modelling step
-#import your model
 model=LinearRegression()
-#fitting and predict your model
+#fitting and predict  model
 model.fit(X_train, y_train)
 model.predict(X_test)
 errors = np.sqrt(mean_squared_error(y_test,model.predict(X_test))) 
@@ -60,17 +59,4 @@ if st.sidebar.button("See the Price! 😍"):
 
 st.sidebar.subheader ('Made with 💖 by')
 st.sidebar.subheader('[*Faruki Ramly*](https://www.linkedin.com/in/farukiramly/)')
-#---Footer
-hide_streamlit_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: visible;}
-            footer:after{
-                content:'Made with 💖 by Faruki Ramly;
-                display:block;
-                position:relative;
-                color:tomato;
-            }
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+st.sidebar.caption('Github Source Code can fine [here]('https://github.com/farukiramly/final-project')
