@@ -24,7 +24,7 @@ st.image(image, use_column_width=True)
 
 #checking the data
 st.write("This is an application for predict how much the prices based on criteria that you choose.")
-st.write("Please choose the criteria in the sidebar and click the button to see the price😄")
+st.write("Please choose the criteria in the sidebar👈 and click the button to see the price😄")
 st.write("I take the data from [kaggle](%s)" % data_link)
 check_data = st.checkbox("See the simple data")
 if check_data:
