@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run ds_project_shopee.py
+web: sh setup.sh && streamlit run app.py
