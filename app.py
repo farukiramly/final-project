@@ -22,7 +22,7 @@ st.image(image, use_column_width=True)
 #---SIDEBAR
 # col1, col2 = st.sidebar.columns(2)
 st.sidebar.title("🎊 Hello! Welcome 🎊")
-# image = Image.open('profile.jpg')
+image = Image.open('profile.jpg')
 # col1.image(image, use_column_width=True)
 # col2.write('Made with 💖 by')
 # col2.write('[*Faruki Ramly*](https://www.linkedin.com/in/farukiramly/)')
