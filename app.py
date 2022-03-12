@@ -19,10 +19,7 @@ data_link= "https://www.kaggle.com/shree1992/housedata"
 st.title("Welcome to House Prediction app")
 st.image(image, use_column_width=True)
 
-#---SIDEBAR
-st.sidebar.title("🎊 Hello! Welcome 🎊")
-st.sidebar.header ('Made with 💖 by')
-# st.sidebar.write('[*Faruki Ramly*](https://www.linkedin.com/in/farukiramly/)')
+
 
 
 #checking the data
@@ -30,14 +27,18 @@ st.write("This is an application for predict how much the prices based on criter
 check_data = st.checkbox("See the simple data")
 if check_data:
     st.write(data.head())
-st.write("Now lets choose the criteria you want")
 
-#input the numbers
+
+#input the numbers sidebar
 year = st.sidebar.slider("What Year Build you want?",int(data.yr_built.min()),int(data.yr_built.max()),int(data.yr_built.mean()) )
 sqft_liv = st.sidebar.slider("What is your square feet of living room?",int(data.sqft_living.min()),int(data.sqft_living.max()),int(data.sqft_living.mean()) )
 bath     = st.sidebar.slider("How many bathrooms?",int(data.bathrooms.min()),int(data.bathrooms.max()),int(data.bathrooms.mean()) )
 bed      = st.sidebar.slider("How many bedrooms?",int(data.bedrooms.min()),int(data.bedrooms.max()),int(data.bedrooms.mean()) )
 floor    = st.sidebar.slider("How many floor do you want?",int(data.floors.min()),int(data.floors.max()),int(data.floors.mean()) )
+
+st.sidebar.title("🎊 lets choose the criteria you want🎊")
+st.sidebar.header ('Made with 💖 by')
+st.sidebar.subheader('[*Faruki Ramly*](https://www.linkedin.com/in/farukiramly/)')
 
 #splitting your data
 X = data.drop('price', axis = 1)
