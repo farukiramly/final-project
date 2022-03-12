@@ -20,7 +20,6 @@ st.title("Welcome to House Prediction app")
 st.image(image, use_column_width=True)
 
 #---SIDEBAR
-st.sidebar.columns(2)
 st.sidebar.title("🎊 Hello! Welcome 🎊")
 image = Image.open('profile.jpg')
 image(image, use_column_width=True)
