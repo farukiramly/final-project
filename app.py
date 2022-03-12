@@ -21,7 +21,7 @@ st.image(image, use_column_width=True)
 
 #---SIDEBAR
 st.sidebar.title("🎊 Hello! Welcome 🎊")
-st.sidebar.write('Made with 💖 by')
+st.sidebar.write(('Made with 💖 by'))
 # st.sidebar.write('[*Faruki Ramly*](https://www.linkedin.com/in/farukiramly/)')
 
 
