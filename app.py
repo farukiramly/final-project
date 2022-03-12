@@ -59,4 +59,4 @@ if st.sidebar.button("See the Price! 😍"):
 
 st.sidebar.subheader ('Made with 💖 by')
 st.sidebar.subheader('[*Faruki Ramly*](https://www.linkedin.com/in/farukiramly/)')
-st.sidebar.caption('Github Source Code can fine [here]('https://github.com/farukiramly/final-project')
+st.sidebar.subheader ('Github Source Code can fine [here]('https://github.com/farukiramly/final-project')
