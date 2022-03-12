@@ -9,6 +9,7 @@ I use Google Colab to cleaning the data and take some variables to predict the p
 I choose linear regression as the model for this webapp and the prediction will the the range for the price of house that we choose from criteria
 
 References : 
+
 https://github.com/rizkysifaul
 
 https://www.kaggle.com/galaxygeorge/house-price-prediction-eda-fe-model
