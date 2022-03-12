@@ -55,7 +55,7 @@ errors = np.sqrt(mean_squared_error(y_test,model.predict(X_test)))
 predictions = model.predict([[sqft_liv,bath,bed,floor,year]])[0]
 
 #checking prediction house price
-if st.button("See the Price! 😍"):
+if st.sidebar.button("See the Price! 😍"):
     st.header("Your house prices prediction is USD {}".format(int(predictions)))
     st.subheader("Your house range is USD {} - USD {}".format(int(predictions-errors),int(predictions+errors) ))
 
